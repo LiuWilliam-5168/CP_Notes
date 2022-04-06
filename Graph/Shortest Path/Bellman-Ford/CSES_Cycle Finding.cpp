@@ -49,7 +49,7 @@ signed main() {
     }
     if (update) {
         cout << "YES\n";
-        for (int i = 1; i <= n; i++) start = from[start];
+        for (int i = 1; i <= n; i++) start = from[start];   // 確保 start 在負環內
         dfs(start);
         reverse(an.begin(), an.end());
         for (int i : an) cout << i << ' ';
