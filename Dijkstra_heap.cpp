@@ -9,7 +9,7 @@ using namespace std;
 
 vector <int> Dijkstra(const vector <vector <pii>> &g, int start) {   // pair <weight of edge, neighbor> 
     priority_queue <pii, vector <pii>, greater <pii>> pq;
-    vector <int> dis(g.size(), INF);
+    vector <int> dis(n, INF);
     pq.push({0, start});
     
     while (!pq.empty()) {
