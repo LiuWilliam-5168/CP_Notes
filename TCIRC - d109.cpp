@@ -8,28 +8,28 @@
 using namespace std;
 const int maxn = 1e5 + 5, INF = 1e18;
 
-int N, dp[maxn][2];
+int N, w[maxn], dp[maxn][2];
 vector <int> e[maxn];
 
 void dfs(int u) {
-    dp[u][1] = 1;
+    dp[u][1] = w[u];
     for (int v : e[u]) {
         dfs(v);
         dp[u][0] += max(dp[v][0], dp[v][1]);
         dp[u][1] += dp[v][0];
     }
-}   
+}
 
 signed main() {
     ios_base::sync_with_stdio(0), cin.tie(0), cout.tie(0);
-    cin >> N;
+    cin >> N >> w[1];
 
-    for (int v = 1; v < N; v++) {
-        int u;  cin >> u;
+    for (int v = 2; v <= N; v++) {
+        int u;  cin >> u >> w[v];
         e[u].pb(v);
     }
-    dfs(0);
-    cout << max(dp[0][0], dp[0][1]) << "\n";
+    dfs(1);
+    cout << max(dp[1][0], dp[1][1]) << "\n";
 
     return 0;
 }
