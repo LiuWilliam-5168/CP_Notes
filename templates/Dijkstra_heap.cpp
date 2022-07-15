@@ -1,12 +1,3 @@
-#include <bits/stdc++.h>
-
-#define int long long
-#define pii pair <int, int>
-#define ff first
-#define ss second
-const int INF = 1e9;
-using namespace std;
-
 vector <int> Dijkstra(const vector <vector <pii>> &g, int start) {   // pair <weight of edge, neighbor> 
     priority_queue <pii, vector <pii>, greater <pii>> pq;
     vector <int> dis(n, INF);
