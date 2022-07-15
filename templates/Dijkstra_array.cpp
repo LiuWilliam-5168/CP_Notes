@@ -1,9 +1,3 @@
-#include <bits/stdc++.h>
-
-#define int long long
-const int INF = 1e9;
-using namespace std;
-
 vector <int> Dijkstra(const vector <vector <int>> &g, int start) {   // g[i][j] = weight i -> j
     vector <int> an(n, INF);    // answer
     vector <int> d(n, INF);   // data structure
