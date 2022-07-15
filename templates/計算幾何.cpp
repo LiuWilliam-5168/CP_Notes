@@ -27,7 +27,7 @@ int ori(point a, point b, point c) {
 	return sign((b - a) ^ (c - a));
 }
 
-// 判斷是否三點共線 
+// 判斷是否三點共線
 bool colinear(point a, point b, point c) {	
 	return sign((b - a) ^ (c - a)) == 0;
 }
