@@ -56,3 +56,8 @@ point banana_point(point a, point b, point c, point d) {
 	int bcd = (c - b) ^ (d - b);
 	return (a * bcd + b * acd) / (acd + bcd);
 }
+
+// 三角形面積 (假如要算面積記得要除以 2)
+int area(point a, point b, point c) {
+	return abs((b - a) ^ (c - a));
+}
