@@ -1,15 +1,15 @@
-vector <int> Dijkstra(const vector <vector <pii>> &g, int start) {   // pair <weight of edge, neighbor> 
+vector <int> dijkstra(const vector <vector <pii>> &e, int start) {   // {neighbor, weight} 
     priority_queue <pii, vector <pii>, greater <pii>> pq;
     vector <int> dis(n, INF);
-    pq.push({0, start});
     
+    pq.push({0, start});
     while (!pq.empty()) {
-        auto tmp = pq.top();  pq.pop();
-        int cnt = tmp.ff, u = tmp.ss;
+        auto [d, u] = pq.top();  pq.pop();
+        
         if (dis[u] != INF) continue;
         dis[u] = cnt;
-        for (auto e : g[u]) {
-            pq.push({e.ff + dis[u], e.ss});
+        for (auto [v, w] : e[u]) {
+            pq.push({dis[u] + w, v});
         }
     }
 
