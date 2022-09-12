@@ -9,7 +9,7 @@ struct TrieNode
 
 struct TrieNode* getNode() 
 {
-    TrieNode* parNode = NULL;
+    struct TrieNode* parNode = NULL;
 
     parNode = (struct TrieNode*) malloc(sizeof(struct TrieNode));
     
