@@ -1,3 +1,5 @@
+const int alphabet_size = 26;
+
 struct TrieNode 
 {
     struct TrieNode* kids[alphabet_size];
@@ -37,6 +39,7 @@ void insert(struct TrieNode* root, string word)
     pCrawl->isEnd = true;
 }
 
+// 依題目要求來更改 search() 內的東西
 vector<int> search(struct TrieNode* root, string word) 
 {
     struct TrieNode* pCrawl = root;
