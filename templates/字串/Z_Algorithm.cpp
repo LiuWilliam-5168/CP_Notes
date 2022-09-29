@@ -15,9 +15,4 @@ void Z_algo() {
             --r;
         }
     }
-    
-    for (int i = 1; i <= n; i++) {
-        cout << z[i] << ' ';
-    }
-    cout << "\n";
 }
