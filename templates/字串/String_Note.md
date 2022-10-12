@@ -3,7 +3,7 @@
 ## Trie 字典樹
 
 <details> 
-    <summary> ***Template*** </summary>
+    <summary> **Template** </summary>
     
     ```cpp
     const int maxn = 1000005;
