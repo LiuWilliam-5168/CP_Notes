@@ -4,6 +4,7 @@
 
 <details> 
     <summary> ***Template*** </summary>
+    
     ```cpp
     const int maxn = 1000005;
     const int alphabet_size = 26;
@@ -40,6 +41,7 @@
         // 依題目要求來更改 search() 內的東西
     }
     ```
+    
 </details>
 
 Introduction: [here](https://www.geeksforgeeks.org/trie-insert-and-search/)
