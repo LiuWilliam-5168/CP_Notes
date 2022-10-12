@@ -2,7 +2,7 @@
 
 ## Trie 字典樹
 
-:::spoiler ***Template***
+<details> ***Template***
 ```cpp
 const int maxn = 1000005;
 const int alphabet_size = 26;
@@ -39,7 +39,7 @@ int search(struct TrieNode* root, string word)
     // 依題目要求來更改 search() 內的東西
 }
 ```
-:::
+<details/>
 
 Introduction: [here](https://www.geeksforgeeks.org/trie-insert-and-search/)
 | Problems | Link | Solution | Notes |
