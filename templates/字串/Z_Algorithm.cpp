@@ -6,7 +6,7 @@ int z[maxn];
 void Z_algo() {
     int l = 1, r = 1;
     for (int i = 2; i <= n; i++) {
-        if (s[i] == s[i - l + 1] && i + z[i - l + 1] <= r) {
+        if (i + z[i - l + 1] <= r) {
             z[i] = z[i - l + 1];
         } else {
             l = i, r = max(i, r);
