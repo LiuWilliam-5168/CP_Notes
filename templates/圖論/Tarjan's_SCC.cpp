@@ -12,7 +12,7 @@ void dfs(int u) {
 		if (!dfn[v]) {
 			dfs(v);
 			low[u] = min(low[u], low[v]);
-		} else if (instk[v]) {
+		} else if (instk[v]) {	// 為了排除 Cross Edge
 			low[u] = min(low[u], dfn[v]);
 		}
 	}
