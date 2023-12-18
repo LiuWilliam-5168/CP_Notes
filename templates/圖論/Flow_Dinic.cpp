@@ -42,7 +42,7 @@ struct Dinic {
 	int dfs(int u, int now) {
 		if (u == t or now == 0) return now;
 		int rtn = 0, f;
-		for (int i = cur[u]; i < sz(g[u]); i++) {
+		for (int &i = cur[u]; i < sz(g[u]); i++) {
 			Edge &e = edges[g[u][i]];
 			if (d[e.v] != d[u] + 1) continue;
 			f = dfs(e.v, min(now, e.rest));
